@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,46 +8,91 @@
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- CSS KAMU (WAJIB DI BAWAH BOOTSTRAP) -->
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="index.html">MyPort<span>folio</span> </a>
+<body>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
-        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
+<!-- OFFCANVAS (MOBILE) -->
+<div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasNavbar">
+    <div class="offcanvas-header">
+        <h5 class="fw-bold">MyPortfolio</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
     </div>
-  </div>
+
+    <div class="offcanvas-body">
+        <ul class="navbar-nav text-center">
+            <li class="nav-item"><a class="nav-link text-white active" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="skills.html">Skills</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="projects.html">Projects</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top p-3 shadow-sm bg-white" id="main-nav">
+    <div class="container">
+
+        <!-- LOGO -->
+        <a class="navbar-brand fw-bold" href="index.html">
+            MyPort<span class="text-warning">folio</span>
+        </a>
+
+        <!-- TOGGLE (MOBILE) -->
+        <button class="navbar-toggler d-lg-none" type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- MENU DESKTOP -->
+        <div class="d-none d-lg-flex ms-auto">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+    </div>
 </nav>
 
-<header class="text-center">
+<!-- HERO -->
+<header class="hero d-flex align-items-center text-center">
   <div class="container">
-    <img src="image/IMG_1296.JPG" class="profile-img rounded-circle shadow mb-4" width="150">
 
+    <!-- FOTO -->
+    <img src="image/IMG_1296.JPG" 
+         class="profile-img rounded-circle shadow mb-4">
+
+    <!-- TEXT -->
     <h1 class="fw-bold">Hi, I'm Alicia 👋</h1>
 
     <p class="lead text-muted">
       Turning dreams into meaningful digital experiences.
     </p>
 
-    <p class="mb-4">
+    <p class="mb-4 fw-medium">
       Ambitious • Hardworking • Independent
     </p>
 
-    <a href="projects.html" class="btn btn-primary btn-hero">Explore My Work</a>
+    <!-- BUTTON -->
+    <a href="projects.html" class="btn btn-primary btn-hero">
+      Explore My Work
+    </a>
+
   </div>
 </header>
+
+<!-- BOOTSTRAP JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

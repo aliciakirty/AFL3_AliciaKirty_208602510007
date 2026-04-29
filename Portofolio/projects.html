@@ -1,78 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Portfolio - Projects</title>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- CSS KAMU (WAJIB DI BAWAH BOOTSTRAP) -->
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="index.html">MyPort<span>folio</span> </a>
+<body style="padding-top: 80px;">
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
-        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
+<!-- OFFCANVAS (MOBILE) -->
+<div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasNavbar">
+    <div class="offcanvas-header">
+        <h5 class="fw-bold">MyPortfolio</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
     </div>
-  </div>
+
+    <div class="offcanvas-body">
+        <ul class="navbar-nav text-center">
+            <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="skills.html">Skills</a></li>
+            <li class="nav-item"><a class="nav-link text-white active" href="projects.html">Projects</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top p-3 shadow-sm bg-white">
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="index.html">
+            MyPort<span class="text-warning">folio</span>
+        </a>
+
+        <!-- MOBILE BUTTON -->
+        <button class="navbar-toggler d-lg-none" type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- DESKTOP MENU -->
+        <div class="d-none d-lg-flex ms-auto">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+    </div>
 </nav>
 
-<section class="container">
-  <h2 class="text-center mb-4 fw-bold">My Projects</h2>
+<!-- PROJECT SECTION -->
+<section class="container py-5">
+  <h2 class="text-center mb-3 fw-bold">My Projects</h2>
 
-  <p class="text-center text-muted mb-4">
-  These are some of the projects I have worked on. 
-  Each project reflects my progress, creativity, and understanding in building simple yet meaningful digital solutions.</p>
+  <p class="text-center text-muted mb-5">
+    These are some of the projects I have worked on. 
+    Each project reflects my progress, creativity, and understanding in building simple yet meaningful digital solutions.
+  </p>
 
   <div class="row g-4">
 
+    <!-- PROJECT 1 -->
     <div class="col-md-4">
-      <div class="card shadow">
+      <div class="card project-card shadow h-100">
         <img src="image/Screenshot 2026-04-28 at 1.15.46 AM.png" class="card-img-top">
         <div class="card-body">
-          <h5>Personal Portfolio Website</h5>
-          <p>A simple personal profile webpage that displays basic information such as name, major, hobbies, and includes a dark mode toggle for user experience.</p>
-          <small>HTML • CSS • JavaScript</small>
+          <h5 class="fw-bold">Student Profile Website</h5>
+          <p class="text-muted small">
+            A simple personal profile webpage with dark mode toggle and interactive UI.
+          </p>
+          <span class="badge bg-warning text-dark">HTML</span>
+          <span class="badge bg-warning text-dark">CSS</span>
+          <span class="badge bg-warning text-dark">JavaScript</span>
         </div>
       </div>
     </div>
 
+    <!-- PROJECT 2 -->
     <div class="col-md-4">
-      <div class="card shadow">
+      <div class="card project-card shadow h-100">
         <img src="image/Screenshot 2026-04-28 at 1.16.32 AM.png" class="card-img-top">
         <div class="card-body">
-          <h5>Recipe Website UI</h5>
-          <p>A modern recipe website interface featuring food categories, search functionality, and a clean user-friendly layout.</p>
-          <small>HTML • CSS (UI Design)</small>
+          <h5 class="fw-bold">Recipe Website UI</h5>
+          <p class="text-muted small">
+            A clean and modern recipe interface with categories and search feature.
+          </p>
+          <span class="badge bg-warning text-dark">HTML</span>
+          <span class="badge bg-warning text-dark">CSS</span>
         </div>
       </div>
     </div>
 
+    <!-- PROJECT 3 -->
     <div class="col-md-4">
-      <div class="card shadow">
+      <div class="card project-card shadow h-100">
         <img src="image/Screenshot 2026-04-28 at 1.17.16 AM.png" class="card-img-top">
         <div class="card-body">
-          <h5>Student Data Form</h5>
-          <p>A complete student registration form with input validation, including personal data, selection options, and file upload feature.</p>
-          <small>HTML • CSS</small>
+          <h5 class="fw-bold">Student Registration Form</h5>
+          <p class="text-muted small">
+            A structured form with multiple inputs and file upload.
+          </p>
+          <span class="badge bg-warning text-dark">HTML</span>
+          <span class="badge bg-warning text-dark">CSS</span>
         </div>
       </div>
     </div>
 
   </div>
 </section>
+
+<!-- BOOTSTRAP JS (WAJIB!) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

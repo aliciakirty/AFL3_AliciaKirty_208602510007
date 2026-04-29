@@ -1,42 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
 
-    <!-- Bootstrap -->
+    <!-- BOOTSTRAP CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- CSS KAMU (WAJIB DI BAWAH BOOTSTRAP) -->
+    <!-- CSS KAMU -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="index.html">MyPort<span>folio</span> </a>
+<body data-bs-spy="scroll" data-bs-target="#main-nav">
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
-        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
+<!-- OFFCANVAS (MOBILE) -->
+<div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasNavbar">
+    <div class="offcanvas-header">
+        <h5 class="fw-bold">MyPortfolio</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
     </div>
-  </div>
+
+    <div class="offcanvas-body">
+        <ul class="navbar-nav text-center">
+            <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link text-white active" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="skills.html">Skills</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="projects.html">Projects</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top p-3 shadow-sm bg-white" id="main-nav">
+    <div class="container">
+
+        <!-- LOGO -->
+        <a class="navbar-brand fw-bold" href="index.html">
+            MyPort<span class="text-warning">folio</span>
+        </a>
+
+        <!-- TOGGLE (MOBILE) -->
+        <button class="navbar-toggler d-lg-none" type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- MENU DESKTOP -->
+        <div class="d-none d-lg-flex ms-auto">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+    </div>
 </nav>
 
-<section class="container">
+<!-- CONTENT -->
+<section class="container mt-5 pt-5">
   <h2 class="text-center mb-5 fw-bold">About Me</h2>
 
   <div class="row align-items-center">
-    <div class="col-md-3">
+    
+    <div class="col-md-3 text-center">
       <img src="image/IMG_1296.JPG" width="200" class="img-fluid rounded shadow">
     </div>
 
@@ -56,9 +90,10 @@
       </p>
     </div>
 
-    <div class="card experience-card shadow-lg mt-4 p-4">
+  </div>
 
-  <h4 class="mb-4 fw-bold">Experience</h4>
+<div class="card experience-card shadow-lg mt-4 p-4">
+<h4 class="mb-4 fw-bold">Experience</h4>
 
   <!-- O-WEEK -->
   <div class="mb-4">
@@ -174,3 +209,8 @@
 
   </div>
 </section>
+<!-- BOOTSTRAP JS (WAJIB DI BAWAH) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
