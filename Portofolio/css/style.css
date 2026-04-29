@@ -1,0 +1,193 @@
+:root {
+    --primary: #f4c542;   /* butter yellow lebih tegas */
+    --secondary: #fff8e1;
+    --dark: #2d2d2d;
+}
+
+/* GLOBAL */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fffdf8;
+    color: var(--dark);
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+.navbar {
+    background: white !important;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.navbar .nav-link {
+    color: #333 !important;
+    font-weight: 500;
+}
+
+.navbar .nav-link:hover {
+    color: var(--primary) !important;
+}
+
+/* HERO */
+header {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #fff3c4, #ffffff);
+    padding-top: 80px;
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+/* BUTTON */
+.btn-primary {
+    background: var(--primary);
+    border: none;
+    color: #000;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background: #e0b93f;
+}
+
+/* SECTION */
+section {
+    padding: 80px 0;
+}
+
+/* CARD */
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* PROGRESS */
+.progress {
+    height: 10px;
+    border-radius: 20px;
+}
+
+.progress-bar {
+    background: var(--primary);
+}
+
+/* GALLERY */
+.gallery img {
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+    background: var(--dark);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ANIMATION */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav-link.active {
+    color: var(--primary) !important;
+    font-weight: 700;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #000 !important;
+}
+
+.navbar-brand span {
+    color: var(--primary);
+}
+
+/* FOTO PROFIL */
+.profile-img {
+    width: 150px;
+    transition: all 0.4s ease;
+}
+
+/* HOVER EFFECT */
+.profile-img:hover {
+    transform: scale(1.1) rotate(2deg);
+}
+
+/* BUTTON HERO */
+.btn-hero {
+    padding: 12px 28px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* HOVER BUTTON */
+.btn-hero:hover {
+     transform: scale(1.1);
+}
+
+/* GALLERY ITEM */
+.gallery-item {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 12px;
+}
+
+/* HOVER EFFECT */
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    filter: brightness(1.05);
+}
+
+/* CARD */
+.skill-card {
+    transition: 0.3s ease;
+    border-radius: 15px;
+}
+
+/* HOVER EFFECT */
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* ICON */
+.skill-card h1 {
+    font-size: 2.5rem;
+}
+
+/* PROGRESS */
+.progress {
+    height: 12px;
+    border-radius: 20px;
+}
+
+.progress-bar {
+    font-size: 0.75rem;
+    font-weight: 600;
+    background-color: #f4c542;
+    color: #000;
+}
